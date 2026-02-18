@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Training Tracker</title>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<h1>Training &amp; Certification Tracker</h1>
+<p class="small">Mini project 1st demo</p>
+<div class="card controls">
+<input id="q" placeholder="search name or department"/>
+<select id="deptFilter"></select>
+<button class="btn" id="exportBtn">Export Excel</button>
+</div>
+<div class="stats">
+<div class="stat">
+<div style="font-size:12px; color:#666;">Students</div>
+<div id="cntStudents" style="font-weight:600; font-size:18px;">0</div>
+</div>
+<div class="stat">
+<div style="font-size:12px; color:#666;">Modules</div>
+<div id="cntModules" style="font-weight:600; font-size:18px;">0</div>
+</div>
+<div class="stat">
+<div style="font-size:12px; color:#666;">Avg Tasks</div>
+<div id="avgTasks" style="font-weight:600; font-size:18px;">0</div>
+</div>
+</div>
+<div class="card" id="bars">
+<div style="font-weight:600; margin-bottom:8px;">Completed tasks</div>
+<!-- bars will be inserted here -->
+</div>
+<div class="card">
+<div style="font-weight:600; margin-bottom:8px;">Student list</div>
+<table>
+<thead>
+<tr><th>Name</th><th>Dept</th><th>Tasks</th><th>Modules</th><th>Next Course Due</th></tr>
+</thead>
+<tbody id="studentTable"></tbody>
+</table>
+</div>
+<div class="card">
+<div style="font-weight:600; margin-bottom:8px;">Expiring training course (next <span id="days">30</span> days)</div>
+<input id="rangeDays" max="365" min="7" type="range" value="30"/>
+<div class="smalltext" id="expiringList" style="margin-top:8px;"></div>
+</div>
+
+<script src="script.js"></script></body>
+</html>
